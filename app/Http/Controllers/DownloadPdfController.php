@@ -8,6 +8,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 
 
 
+
 class DownloadPdfController extends Controller
 {
 
