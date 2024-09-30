@@ -28,3 +28,4 @@ class DownloadPdfController extends Controller
 
     }
 }
+ 
