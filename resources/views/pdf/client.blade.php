@@ -4,27 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados do Cliente</title>
-    <style>
+       <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f4f8, #d9d9d9); /* Degradê leve */
             color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .score-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .score-title {
+            font-size: 24px;
+            color: #9408a7;
+            margin-bottom: 10px;
+        }
+
+        .score-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #9408a7;
+            margin: 10px 0;
+        }
+
+        .score-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .info-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 22%; /* Ajuste a largura conforme necessário */
             text-align: center;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+
+        .chart-container {
+            position: relative;
+            margin: 20px auto;
+            width: 80%;
+            height: 300px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            font-size: 14px;
         }
-        th {
-            background-color: #f2f2f2;
+
+        .chart-legend div {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -44,7 +106,7 @@
             <td>{{ $client->email }}</td>
         </tr>
         <tr>
-            <th>Endere�o</th>
+            <th>Endere�o</th>
             <td>{{ $client->address }}</td>
         </tr>
         <tr>
